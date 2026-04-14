@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=AIModel
+comment0.text=\r\n\ This\ class\ represents\ an\ AI\ Model.\r\n\ It\ stores\ basic\ information\ like\ model\ name,\ price,\r\n\ parameter\ count\ and\ window\ size.\r\n\r\n\ @author\ (Saman\ Khanal)\r\n\ @date\ (23-01-2026)\r\n
+comment1.params=model1\ price1\ parameter1\ window1
+comment1.target=AIModel(java.lang.String,\ double,\ int,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getModelName()
+comment3.params=
+comment3.target=double\ getPrice()
+comment4.params=
+comment4.target=int\ getParameterCount()
+comment5.params=
+comment5.target=int\ getWindowSize()
+comment6.params=
+comment6.target=java.lang.String\ display()
+numComments=7

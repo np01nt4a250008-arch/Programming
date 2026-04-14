@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Main
+comment0.text=\r\n\ Main.java\r\n\ This\ program\ is\ used\ to\ test\ the\ functionality\ of\r\n\ PersonalPlan\ and\ ProPlan\ classes.\r\n\ It\ simulates\ different\ scenarios\ such\ as\:\r\n\ -\ Entering\ prompts\r\n\ -\ Exceeding\ quota\r\n\ -\ Purchasing\ more\ prompts\r\n\ -\ Managing\ Pro\ Plan\ team\ members\r\n\ -\ Displaying\ plan\ details\r\n\r\n\ @author\ Saman\ Khanal\r\n\ @version\ 1.1\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

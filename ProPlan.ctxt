@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ProPlan
+comment0.text=\r\n\ This\ class\ represents\ a\ Pro\ Plan\ subscription\ for\ an\ AI\ model.\r\n\ The\ Pro\ Plan\ allows\ teams\ to\ collaborate\ by\ adding\ multiple\ members.\r\n\ It\ inherits\ basic\ AI\ model\ information\ from\ the\ AIModel\ class\r\n\ and\ adds\ functionality\ related\ to\ team\ member\ slots.\r\n\r\n\ @author\ (Saman\ Khanal)\r\n\ @date\ (05-03-2025)\r\n
+comment1.params=modelName\ price\ parameterCount\ windowSize\ availableSlots
+comment1.target=ProPlan(java.lang.String,\ double,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ of\ the\ ProPlan\ class.\r\n\ This\ constructor\ initializes\ both\ the\ AIModel\ attributes\r\n\ (inherited\ from\ the\ parent\ class)\ and\ the\ availableSlots\ attribute\r\n\ specific\ to\ the\ ProPlan\ class.\r\n
+comment2.params=
+comment2.target=int\ getAvailableSlots()
+comment2.text=\r\n\ Getter\ method\ used\ to\ retrieve\ the\ number\ of\r\n\ available\ team\ member\ slots\ in\ the\ Pro\ Plan.\r\n
+comment3.params=memberName
+comment3.target=java.lang.String\ addTeamMember(java.lang.String)
+comment3.text=\r\n\ This\ method\ allows\ a\ new\ team\ member\ to\ be\ added\r\n\ to\ the\ Pro\ Plan\ if\ slots\ are\ still\ available.\r\n\ When\ a\ member\ is\ added,\ the\ available\ slot\ count\ decreases.\r\n
+comment4.params=memberName
+comment4.target=java.lang.String\ removeTeamMember(java.lang.String)
+comment4.text=\r\n\ This\ method\ removes\ a\ team\ member\ from\ the\ Pro\ Plan.\r\n\ When\ a\ member\ is\ removed,\ a\ slot\ becomes\ available\ again.\r\n
+comment5.params=
+comment5.target=java.lang.String\ display()
+comment5.text=\r\n\ This\ method\ overrides\ the\ display()\ method\ from\ the\ AIModel\ class.\r\n\ It\ first\ calls\ the\ parent\ display()\ method\ to\ show\ AI\ model\ details\r\n\ and\ then\ adds\ Pro\ Plan\ specific\ information\ like\ team\ slots.\r\n
+numComments=6

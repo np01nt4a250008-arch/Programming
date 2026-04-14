@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=PersonalPlan
+comment0.text=\r\n\ This\ class\ represents\ a\ Personal\ Plan\ for\ an\ AI\ model.\r\n\ It\ extends\ the\ AIModel\ class\ and\ adds\ features\ related\r\n\ to\ user\ prompt\ limits\ in\ a\ monthly\ subscription\ plan.\r\n\r\n\ @author\ (Saman\ Khanal)\r\n\ @date\ (05-03-2026)\r\n
+comment1.params=modelName\ price\ parameterCount\ windowSize\ promptsRemaining
+comment1.target=PersonalPlan(java.lang.String,\ double,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ of\ PersonalPlan\ class.\r\n\ This\ constructor\ initializes\ both\:\r\n\ 1.\ The\ attributes\ from\ the\ parent\ class\ (AIModel)\r\n\ 2.\ The\ promptsRemaining\ attribute\ from\ this\ class\r\n
+comment2.params=
+comment2.target=int\ getPromptsRemaining()
+comment2.text=\r\n\ Getter\ method\ to\ retrieve\ the\ number\ of\ prompts\ remaining.\r\n\ This\ allows\ other\ classes\ to\ check\ how\ many\ prompts\ are\ left.\r\n
+comment3.params=additionalPrompts
+comment3.target=java.lang.String\ purchasePrompts(int)
+comment3.text=\r\n\ This\ method\ allows\ the\ user\ to\ purchase\ additional\ prompts.\r\n\ The\ user\ enters\ the\ number\ of\ prompts\ they\ want\ to\ add.\r\n\ The\ method\ also\ checks\ if\ the\ entered\ value\ is\ valid.\r\n
+comment4.params=promptText\ responseLength
+comment4.target=java.lang.String\ enterPrompt(java.lang.String,\ int)
+comment4.text=\r\n\ This\ method\ simulates\ the\ user\ entering\ a\ prompt\ to\ the\ AI\ model.\r\n\ It\ checks\ if\ the\ user\ still\ has\ prompts\ available.\r\n\ If\ yes,\ it\ decreases\ the\ prompt\ count\ and\ processes\ the\ request.\r\n\ If\ not,\ it\ shows\ an\ error\ message.\r\n
+comment5.params=
+comment5.target=java.lang.String\ display()
+comment5.text=\r\n\ This\ method\ overrides\ the\ display()\ method\ from\ the\ parent\ class.\r\n\ It\ first\ shows\ the\ AIModel\ information\ and\ then\ adds\r\n\ additional\ information\ specific\ to\ PersonalPlan.\r\n
+numComments=6
