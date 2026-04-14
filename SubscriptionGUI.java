@@ -404,15 +404,14 @@ public class SubscriptionGUI extends JFrame implements ActionListener
      */
     private PersonalPlan findLastPersonalPlan()
     {
-        PersonalPlan found = null;
-        for (AIModel m : plans)
+        for (int i = plans.size() - 1; i >= 0; i--)
         {
-            if (m instanceof PersonalPlan)
+            if (plans.get(i) instanceof PersonalPlan)
             {
-                found = (PersonalPlan) m;
+                return (PersonalPlan) plans.get(i);
             }
         }
-        return found;
+        return null;
     }
 
     /**
@@ -420,15 +419,14 @@ public class SubscriptionGUI extends JFrame implements ActionListener
      */
     private ProPlan findLastProPlan()
     {
-        ProPlan found = null;
-        for (AIModel m : plans)
+        for (int i = plans.size() - 1; i >= 0; i--)
         {
-            if (m instanceof ProPlan)
+            if (plans.get(i) instanceof ProPlan)
             {
-                found = (ProPlan) m;
+                return (ProPlan) plans.get(i);
             }
         }
-        return found;
+        return null;
     }
 
     // ---------------------------------------------------------------
