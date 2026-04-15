@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SubscriptionGUI
+comment0.text=\r\n\ SubscriptionGUI\ stores\ simple\ subscription\ details\ and\ supports\r\n\ exporting\ to\ and\ loading\ from\ a\ text\ file.\r\n
+comment1.params=
+comment1.target=SubscriptionGUI()
+comment2.params=subscriberName\ planType\ promptsRemaining\ availableSlots
+comment2.target=SubscriptionGUI(java.lang.String,\ java.lang.String,\ int,\ int)
+comment3.params=subscriberName\ model
+comment3.target=SubscriptionGUI(java.lang.String,\ AIModel)
+comment3.text=\r\n\ Constructor\ that\ builds\ a\ SubscriptionGUI\ from\ an\ AIModel.\r\n\ The\ plan\ type\ is\ taken\ from\ the\ model\ name.\r\n
+comment4.params=subscriberName\ plan
+comment4.target=SubscriptionGUI(java.lang.String,\ PersonalPlan)
+comment4.text=\r\n\ Constructor\ that\ builds\ a\ SubscriptionGUI\ from\ a\ PersonalPlan.\r\n\ Prompts\ remaining\ are\ taken\ directly\ from\ the\ plan.\r\n
+comment5.params=subscriberName\ plan
+comment5.target=SubscriptionGUI(java.lang.String,\ ProPlan)
+comment5.text=\r\n\ Constructor\ that\ builds\ a\ SubscriptionGUI\ from\ a\ ProPlan.\r\n\ Available\ slots\ are\ taken\ directly\ from\ the\ plan.\r\n
+comment6.params=filePath
+comment6.target=java.lang.String\ exportToFile(java.lang.String)
+comment6.text=\r\n\ Exports\ subscription\ data\ to\ a\ file.\r\n\ FileWriter\ +\ BufferedWriter\ +\ PrintWriter\ are\ used\ for\ buffered\ text\ output.\r\n
+comment7.params=filePath
+comment7.target=java.lang.String\ loadFromFile(java.lang.String)
+comment7.text=\r\n\ Loads\ subscription\ data\ from\ a\ file.\r\n\ FileReader\ +\ Scanner\ are\ used\ to\ read\ text\ line-by-line.\r\n
+comment8.params=
+comment8.target=java.lang.String\ display()
+numComments=9

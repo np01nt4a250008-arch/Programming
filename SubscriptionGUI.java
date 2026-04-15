@@ -33,6 +33,42 @@ public class SubscriptionGUI
     }
 
     /**
+     * Constructor that builds a SubscriptionGUI from an AIModel.
+     * The plan type is taken from the model name.
+     */
+    public SubscriptionGUI(String subscriberName, AIModel model)
+    {
+        this.subscriberName = subscriberName;
+        this.planType = model.getModelName();
+        this.promptsRemaining = 0;
+        this.availableSlots = 0;
+    }
+
+    /**
+     * Constructor that builds a SubscriptionGUI from a PersonalPlan.
+     * Prompts remaining are taken directly from the plan.
+     */
+    public SubscriptionGUI(String subscriberName, PersonalPlan plan)
+    {
+        this.subscriberName = subscriberName;
+        this.planType = "Personal";
+        this.promptsRemaining = plan.getPromptsRemaining();
+        this.availableSlots = 0;
+    }
+
+    /**
+     * Constructor that builds a SubscriptionGUI from a ProPlan.
+     * Available slots are taken directly from the plan.
+     */
+    public SubscriptionGUI(String subscriberName, ProPlan plan)
+    {
+        this.subscriberName = subscriberName;
+        this.planType = "Pro";
+        this.promptsRemaining = 0;
+        this.availableSlots = plan.getAvailableSlots();
+    }
+
+    /**
      * Exports subscription data to a file.
      * FileWriter + BufferedWriter + PrintWriter are used for buffered text output.
      */
