@@ -62,12 +62,21 @@ public class subscriptiongui
         // try-catch is used to safely handle file reading and parse errors.
         try (Scanner scanner = new Scanner(new FileReader(filePath)))
         {
+            int lineNumber = 0;
+            StringBuilder invalidLines = new StringBuilder();
+
             while (scanner.hasNextLine())
             {
+                lineNumber++;
                 String line = scanner.nextLine();
                 String[] parts = line.split("=", 2);
                 if (parts.length != 2)
                 {
+                    if (invalidLines.length() == 0)
+                    {
+                        invalidLines.append("Ignored malformed lines: ");
+                    }
+                    invalidLines.append(lineNumber).append(" ");
                     continue;
                 }
 
@@ -84,22 +93,36 @@ public class subscriptiongui
                 }
                 else if (key.equals("promptsRemaining"))
                 {
-                    promptsRemaining = Integer.parseInt(value);
+                    try
+                    {
+                        promptsRemaining = Integer.parseInt(value);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        return "Error parsing field 'promptsRemaining': " + value;
+                    }
                 }
                 else if (key.equals("availableSlots"))
                 {
-                    availableSlots = Integer.parseInt(value);
+                    try
+                    {
+                        availableSlots = Integer.parseInt(value);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        return "Error parsing field 'availableSlots': " + value;
+                    }
                 }
+            }
+            if (invalidLines.length() > 0)
+            {
+                return "Subscription data loaded from: " + filePath + ". " + invalidLines.toString().trim();
             }
             return "Subscription data loaded successfully from: " + filePath;
         }
         catch (IOException e)
         {
             return "Error loading file: " + e.getMessage();
-        }
-        catch (NumberFormatException e)
-        {
-            return "Error parsing numeric values in file: " + e.getMessage();
         }
     }
 
