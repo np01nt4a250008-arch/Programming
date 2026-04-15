@@ -64,6 +64,7 @@ public class subscriptiongui
         {
             int lineNumber = 0;
             StringBuilder invalidLines = new StringBuilder();
+            StringBuilder unknownKeys = new StringBuilder();
 
             while (scanner.hasNextLine())
             {
@@ -99,7 +100,7 @@ public class subscriptiongui
                     }
                     catch (NumberFormatException e)
                     {
-                        return "Error parsing field 'promptsRemaining': " + value;
+                        return "Error parsing field 'promptsRemaining' at line " + lineNumber + ": " + value;
                     }
                 }
                 else if (key.equals("availableSlots"))
@@ -110,13 +111,36 @@ public class subscriptiongui
                     }
                     catch (NumberFormatException e)
                     {
-                        return "Error parsing field 'availableSlots': " + value;
+                        return "Error parsing field 'availableSlots' at line " + lineNumber + ": " + value;
                     }
                 }
+                else
+                {
+                    if (unknownKeys.length() == 0)
+                    {
+                        unknownKeys.append("Unknown keys ignored: ");
+                    }
+                    unknownKeys.append(key).append("(line ").append(lineNumber).append(") ");
+                }
             }
+
+            StringBuilder notes = new StringBuilder();
             if (invalidLines.length() > 0)
             {
-                return "Subscription data loaded from: " + filePath + ". " + invalidLines.toString().trim();
+                notes.append(invalidLines.toString().trim());
+            }
+            if (unknownKeys.length() > 0)
+            {
+                if (notes.length() > 0)
+                {
+                    notes.append("; ");
+                }
+                notes.append(unknownKeys.toString().trim());
+            }
+
+            if (notes.length() > 0)
+            {
+                return "Subscription data loaded from: " + filePath + ". " + notes.toString();
             }
             return "Subscription data loaded successfully from: " + filePath;
         }
