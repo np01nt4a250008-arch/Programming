@@ -6,17 +6,17 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
- * subscriptiongui stores simple subscription details and supports
+ * SubscriptionGUI stores simple subscription details and supports
  * exporting to and loading from a text file.
  */
-public class subscriptiongui
+public class SubscriptionGUI
 {
     private String subscriberName;
     private String planType;
     private int promptsRemaining;
     private int availableSlots;
 
-    public subscriptiongui()
+    public SubscriptionGUI()
     {
         this.subscriberName = "";
         this.planType = "Personal";
@@ -24,7 +24,7 @@ public class subscriptiongui
         this.availableSlots = 0;
     }
 
-    public subscriptiongui(String subscriberName, String planType, int promptsRemaining, int availableSlots)
+    public SubscriptionGUI(String subscriberName, String planType, int promptsRemaining, int availableSlots)
     {
         this.subscriberName = subscriberName;
         this.planType = planType;
